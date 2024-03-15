@@ -1,35 +1,29 @@
-@import './base.css';
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: var(--background-color);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+:root {
+  --background-color: #DADADA;
+  --main-color: #F4F3F5;
+  --nav-color: #9F787C;
+  --danger-color: #F55A4E;
+  --success-color: #74A96C;
+  --icons-color: #A9AFB;
+  --info-color: #2D2879;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media (min-width: 640px) {
+  .main-view {
+    margin-left: 276px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
